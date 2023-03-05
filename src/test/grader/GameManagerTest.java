@@ -13,13 +13,14 @@ public class GameManagerTest {
 		Player terry = new Player(250);
 		GameManager.initializeManager(terry);
 		
-		PierceRock rockA = new PierceRock(25);
+//		PierceRock rockA = new PierceRock(25);
+		NormalRock rockA = new NormalRock(25);
 		NormalRock rockB = new NormalRock(13);
 		
 		GameManager.currentRock = rockA;
 		GameManager.nextRock = rockB;
 		
-		Zombie zombie = new Zombie(200, 10, 2);
+		Zombie zombie = new Zombie(200, 10, 0);
 		
 		assertEquals(25, GameManager.attackZombie(zombie));
 		assertEquals(175, zombie.getHealth());

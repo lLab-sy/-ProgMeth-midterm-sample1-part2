@@ -24,6 +24,10 @@ public class GameManager {
 		//set the currentRock as nextRock
 		//set nextRock as randomRock
 		//return the damage dealt to the zombie
+		int damageDealt = currentRock.dealDamage(zombie);
+		currentRock = nextRock;
+		nextRock = RockManager.randomRock();
+		return damageDealt;
 	}
 	
 	public static int takeTurn(Zombie zombie) {
